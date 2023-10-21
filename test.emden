@@ -1,0 +1,14 @@
+schema main {
+  PrimaryKey<Integer> id,
+  String name,
+}
+
+query hello_emden {
+  main
+  |> name == "Emden"
+  |> limit
+  |> distinct
+  |> group_by(name)
+  |> order_by(id, descending, nulls_last)
+  |> columns(id, name)
+}

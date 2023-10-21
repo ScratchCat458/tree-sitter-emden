@@ -1,0 +1,24 @@
+{
+  "name": "tree-sitter-emden",
+  "version": "1.0.0",
+  "description": "Treesitter support for Emden",
+  "author": "ScratchCat458",
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "scripts": {
+    "test": "tree-sitter generate && tree-sitter parse test.emden"
+  },
+  "main": "bindings/node",
+  "tree-sitter": [
+    {
+      "scope": "source.emden",
+      "file-types": [
+        "emden"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ]
+    }
+  ]
+}
